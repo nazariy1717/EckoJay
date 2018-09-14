@@ -14,24 +14,40 @@
   backface-visibility: hidden;
 }
 
+
 .btn-primary{
+  display: block;
+  position: relative;
+  max-width: 370px;
   width: 100%;
-  max-width: 270px;
-  padding: 0;
   height: 45px;
-  background-color: var(--col-battleship-grey);
-  border-radius: 3px;
+  padding: 0;
   cursor: pointer;
   text-align: center;
   text-transform: uppercase;
   line-height: 45px;
-  font-size: 14px;
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  @include transition;
-  &:hover{
-    box-shadow: 0 0 13px rgba(78, 78, 78, 0.2);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s;
+  &.--red{
+    color: #fff;
+    background-color: var(--rouge);
+    &:hover{
+      background-color: var(--col-black);
+    }
+  }
+  &.--left{
+    span{
+      position: relative;
+      padding-left: 35px;
+    }
+  }
+  i{
+    position: absolute;
+    font-size: 25px;
+    left: 0;
+    top: -4px;
   }
 }
 

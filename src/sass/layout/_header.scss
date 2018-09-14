@@ -2,76 +2,29 @@
 @import "../tools/breakpoints";
 
 .header{
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
   z-index: 99;
-  padding: 20px 0;
-  @include transition;
   backface-visibility: hidden;
-  &.js-active{
-    background-color: rgba(0,0,0,0.45);
-  }
-  &.js-fixed{
-    position: fixed;
-    background-color: rgba(0,0,0,0.45);
-  }
-  @media (max-width: $breakpoint-md){
-    background-color: rgba(0,0,0,0.45);
-  }
-  @media (max-width: $breakpoint-lg){
-    padding: 15px 0;
-  }
-  &__top{
-    margin-bottom: 30px;
-    @media (max-width: $breakpoint-lg){
-      margin-bottom: 20px;
-    }
-    @media (max-width: $breakpoint-sm){
-      margin-bottom: 15px;
-    }
-  }
-  &__bottom{
+  background-color: #fff;
+  &__container{
     position: relative;
+  }
+  &__row{
+    height: 90px;
   }
   &__column{
     padding: 0 15px;
   }
-  &__social{
-    a{
-      color: #ccc;
-    }
-    a:hover{
-      color: #fff;
-    }
-  }
-  &__phone{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    font-style: normal;
-    color: #fff;
-    @media (max-width: $breakpoint-md) {
-      font-size: 14px;
-    }
-  }
   &__logo{
-    display: block;
-    max-width: 245px;
-    @media (max-width: $breakpoint-lg){
-      max-width: 200px;
-    }
-    @media (max-width: 850px){
-      max-width: 160px;
-    }
-    @media (max-width: $breakpoint-md){
-      max-width: 200px;
-    }
+
   }
 }
 
 .header-list{
+  text-align: right;
   @media (max-width: $breakpoint-md){
     display: none;
     position: absolute;
@@ -82,57 +35,57 @@
   }
   &__item{
     display: inline-block;
-    @media (max-width: $breakpoint-md){
-      display: block;
-      text-align: center;
-      margin-bottom: 10px;
-    }
     & + & {
       margin-left: 30px;
-      @media (max-width: $breakpoint-lg){
-        margin-left: 15px;
-      }
-      @media (max-width: $breakpoint-md){
-        margin-left: 0;
-      }
     }
   }
   &__link{
     position: relative;
-    display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    font-weight: 600;
-    font-style: normal;
-    color: #fff;
-    @include transition;
-    &:before, &:after{
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      height: 2px;
-      width: 0;
-      background-color: #fff;
-      @include transition;
-    }
-    &:before{
-      right: 50%;
-    }
-    &:after{
-      left: 50%;
-    }
-    &:hover{
-      &:before,  &:after{
-        width: 15px;
-      }
-    }
+    font-weight: 500;
+    color: var(--col-black);
+    display: block;
+    text-transform: uppercase;
+    transition: all 0.3s;
     &.active{
-      &:before,  &:after{
-        width: 15px;
+      color: var(--rouge);
+      &:before{
+        content: '';
+        position: absolute;
+        left: -2px;
+        right: -2px;
+        bottom: 0;
+        height: 2px;
+        background-color: var(--rouge);
       }
     }
   }
+  &__newsletter{
+    width: 200px;
+  }
+
+  &__btn{
+    @extend .header-list__link;
+    padding-right: 20px;
+    i{
+      position: absolute;
+      font-size: 8px;
+      color: var(--col-black);
+      right: 0;
+      top: 8px;
+    }
+  }
+
 }
+
+
+.header-sublist{
+  display: none;
+}
+
+
+
 
 .hamburger {
   display: none;
@@ -165,7 +118,7 @@
     }
     &__box {
       position: relative;
-      width: 40px;
+      width: 33px;
       height: 24px;
       top: 0;
     }
@@ -174,7 +127,7 @@
       margin-top: -2px;
       &, &:before, &:after {
         position: absolute;
-        width: 40px;
+        width: 33px;
         height: 2px;
         border-radius: 10px;
         top: auto;
@@ -189,7 +142,7 @@
         transition-property: -webkit-transform;
         transition-property: transform;
         transition-property: transform, -webkit-transform;
-        background-color: #fff;
+        background-color: var(--col-black);
       }
       &:before, &:after {
         content: '';

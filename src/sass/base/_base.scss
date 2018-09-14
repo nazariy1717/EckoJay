@@ -162,23 +162,23 @@ a{
     position: absolute;
     font-size: 14px;
     left: 1px;
-    top: 0;
+    top: -2px;
     color: #fff;
   }
   &__link{
     text-decoration: none;
     display: block;
-    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: normal;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.65);
-    @include transition;
+    font-weight: 500;
+    color: var(--pinkish-grey);
+    transition: all 0.3s;
     &:hover{
       color: #fff;
     }
     &.active{
-      font-weight: bold;
       color: #fff;
     }
   }
