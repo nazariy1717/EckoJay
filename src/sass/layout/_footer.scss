@@ -5,9 +5,65 @@
 .footer{
   padding: 60px 0;
   background-color: var(--col-black);
+  &__logo{
+    margin-bottom: 30px;
+  }
+  &__txt{
+    font-size: 13px;
+    line-height: 1.54;
+    color: #fff;
+    &.--modifier{
+      margin-bottom: 25px;
+    }
+  }
+  &__title{
+    display: block;
+    font-family: 'Libre Baskerville', sans sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--warm-grey);
+    margin-bottom: 30px;
+  }
 }
 
 
+.footer-list{
+  &__item{
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    i{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--rouge);
+      font-size: 14px;
+    }
+    p{
+      font-size: 13px;
+      line-height: 1.54;
+      color: #fff;
+    }
+  }
+}
+
+.footer-soc{
+  &__item{
+    display: inline-block;
+    & + & {
+      margin-left: 30px;
+    }
+  }
+  &__link{
+    font-size: 19px;
+    color: #fff;
+    transition: all 0.3s;
+    &:hover{
+      color: var(--rouge);
+    }
+  }
+}
 
 .copyright{
   border-top: 1px solid rgba(117, 117, 117, 0.4);
