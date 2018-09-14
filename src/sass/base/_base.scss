@@ -18,72 +18,12 @@ a{
 
 
 .app-title{
-  position: relative;
-  display: block;
-  font-size: 30px;
-  line-height: 1.1;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--col-black);
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  @media (max-width: $breakpoint-sm){
-    font-size: 24px;
-  }
-  &:after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 70px;
-    height: 2px;
-    background-color: var(--col-battleship-grey);
-  }
-  &.--center{
-    text-align: center;
-    &:after{
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-  }
-  &.--white{
-    color: #fff;
-    &:after{
-      background-color: #9b9b9b;
-    }
-  }
-  &.--small{
-    font-size: 24px;
-    line-height: 1.38;
-  }
+
 
 }
 
 .app-txt{
-  display: block;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-  color: var(--col-warm-grey);
-  &+&{
-    margin-top: 10px;
-  }
-  &.--mb{
-    margin-bottom: 30px;
-  }
-  &.--white{
-   color: #fff;
-  }
-  &.--bold{
-    color: var(--col-battleship-grey);
-    font-weight: bold;
-  }
-  &.--small{
-    font-size: 12px;
-  }
+
 }
 // end of text classes
 
@@ -94,25 +34,7 @@ a{
 
 .section{
   position: relative;
-  &.--padding{
-    padding: 50px 0;
-  }
-  &.--padding-60{
-    padding: 60px 0;
-  }
-  &.--padding-80{
-    padding: 80px 0;
-    @media (max-width: $breakpoint-md){
-      padding: 60px 0;
-    }
-  }
-  &.--bg{
-    background-color: var(--col-black);
-    background-repeat: no-repeat;
-    background-position: center;
-    -webkit-background-size: cover;
-    background-size: cover;
-  }
+
 }
 
 
