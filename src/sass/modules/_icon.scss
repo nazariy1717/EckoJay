@@ -21,6 +21,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-mail:before {
+  content: "\e902";font-size: 12px;
+}
+.icon-fax:before {
+  content: "\e903";font-size: 12px;
+}
+.icon-phone:before {
+  content: "\e904";font-size: 18px;
+}
+.icon-marker:before {
+  content: "\e905";font-size: 18px;
+}
 .icon-newsletter:before {
   content: "\e900";
 }
