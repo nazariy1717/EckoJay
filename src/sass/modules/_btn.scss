@@ -37,17 +37,29 @@
       background-color: var(--col-black);
     }
   }
-  &.--left{
+  &.--newsletter{
     span{
       position: relative;
       padding-left: 35px;
     }
+    i{
+      position: absolute;
+      font-size: 25px;
+      left: 0;
+      top: -4px;
+    }
   }
-  i{
-    position: absolute;
-    font-size: 25px;
-    left: 0;
-    top: -4px;
+  &.--arrow-right{
+    span{
+      position: relative;
+      padding-right: 35px;
+    }
+    i{
+      position: absolute;
+      font-size: 14px;
+      right: 0;
+      top: 3px;
+    }
   }
 }
 
