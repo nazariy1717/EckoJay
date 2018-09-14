@@ -30,6 +30,9 @@
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
   transition: all 0.3s;
+  &.--max-width{
+    max-width: 100%;
+  }
   &.--red{
     color: #fff;
     background-color: var(--rouge);
