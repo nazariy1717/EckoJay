@@ -65,6 +65,169 @@
 
 
 
+.product-image{
+
+}
+
+.product-carousel{
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  background-color: #ebebeb;
+  &__cell{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+  .flickity-prev-next-button {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    transform: translateY(-50%);
+    background-color: var(--rouge);
+
+    transition: all 0.3s;
+    &:hover{
+      background-color: var(--col-black);
+    }
+  }
+
+  .flickity-prev-next-button.previous {
+    left: 0;
+    background: url(../img/slider-arr-prev.png) center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+  .flickity-prev-next-button.next {
+    right: 0;
+    background: url(../img/slider-arr-next.png) center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+
+}
+
+
+
+
+.product-images{
+  height: 580px;
+  overflow: hidden;
+  @media (max-width: $breakpoint-xl){
+    height: 420px;
+  }
+  @media (max-width: 768px){
+    height: 365px;
+  }
+  @media (max-width: 767px){
+    height: 300px;
+  }
+  @media (max-width: $breakpoint-sm){
+    height: 255px;
+  }
+  ::-webkit-scrollbar
+  {
+    width: 6px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track
+  {
+    background-color: #d8d8d8;
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+    border-radius: 5px;
+    background-color: var(--warm-grey);
+  }
+  &__list{
+    overflow-y: scroll;
+    height: 580px;
+    @media (max-width: $breakpoint-xl){
+      height: 420px;
+    }
+    @media (max-width: 768px){
+      height: 365px;
+    }
+    @media (max-width: 767px){
+      height: 300px;
+    }
+    @media (max-width: $breakpoint-sm){
+      height: 255px;
+    }
+  }
+  &__item{
+    padding: 0 2px;
+    width: 125px;
+    display: inline-block;
+    position: relative;
+    height: 83px;
+    opacity: 0.75;
+    margin-bottom: 4px;
+    @media (max-width: $breakpoint-sm){
+      max-width: 95px;
+    }
+    @media (max-width: 374px){
+      max-width: inherit;
+    }
+    &.active{
+      opacity: 1;
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 1px;
+        bottom: 0;
+        border: solid 2px var(--col-black);
+        @media (max-width: $breakpoint-sm){
+          bottom: 12px;
+        }
+        @media (max-width: 374px){
+          bottom: -5px;
+        }
+      }
+    }
+    a{
+      display: block;
+      position: relative;
+      overflow: hidden;
+      height: 83px;
+    }
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      pointer-events: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #product-map{
   height: 400px;
   @media (max-width: $breakpoint-sm){
