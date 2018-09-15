@@ -49,7 +49,7 @@ let product = {
         let self = this;
 
         $('.product-info__top.--panel').on('click',function(){
-            $(this).parent().find('.product-info__content').slideToggle();
+            $(this).parent().find('.product-info__block').slideToggle();
             $(this).find('.product-info__icon').toggleClass('js-active');
         });
 
@@ -58,8 +58,6 @@ let product = {
             $(this).addClass('active');
            console.log('sadas');
         });
-
-
 
 
 

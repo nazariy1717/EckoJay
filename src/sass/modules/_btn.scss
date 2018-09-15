@@ -66,3 +66,29 @@
   }
 }
 
+
+.btn-reset{
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  color: var(--rouge);
+  transition: all 0.3s;
+  &:hover{
+    color: var(--col-black);
+  }
+  span{
+    position: relative;
+    padding-right: 20px;
+  }
+  i{
+    font-size: 12px;
+    color: var(--rouge);
+    position: absolute;
+    right: 0;
+    top: 2px;
+  }
+}
+

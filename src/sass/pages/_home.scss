@@ -161,14 +161,6 @@
   }
 }
 
-.tabs-wrap{
-  padding: 30px 0;
-  background-color: rgba(238, 238, 238, 0.8);
-  @media (max-width: $breakpoint-sm){
-    background-color: var(--col-light-grey);
-  }
-}
-
 
 .app-suggest{
   padding: 60px 0 80px;

@@ -21,6 +21,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-play:before {
+  content: "\e90a";
+}
+.icon-reset:before {
+  content: "\e909";
+}
 .icon-pinterest:before {
   content: "\e907";
 }

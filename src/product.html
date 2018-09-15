@@ -209,26 +209,260 @@
         </div>
     </div>
 
-
-    <div class="section product-info">
+    <div class="section">
         <div class="container">
             <div class="row m-row">
                 <div class="column col-lg-9 col-xs-12">
+                    
+                    <div class="product-description">
+                        <a href="/" class="product-description__virtual-btn">
+                            <i class="icon-play"></i>Virtual tour
+                        </a>
+                        <p class="product-description__txt">Architectural masterpiece! Newly built, modern, sun-filled, magazine-worthy 4+1 bedroom home with stunning curb appeal. Steps to Edwards Gardens. 3,091 square feet of luxury (plus 1,358 square feet of lower level with walk-out). This home of distinction with southern exposure features floor-to-ceiling windows, fabulous master retreat with spa-like ensuite, custom designed gourmet kitchen, top-of-the-line appliances, possible home theatre, smart home system, large relaxing deck with glass railing, quality materials and finishes, attention to details and so much more. Access to good schools: Rippleton Public School, St. Bonaventure Catholic School, York Mills Collegiate and private schools. Steps to parks, TTC, Shops at Don Mills and more!</p>
+                    </div>
+
+
+                    <div class="product-info">
+                        <div class="product-info__top">
+                            <span class="product-title">Property Details</span>
+                        </div>
+                        <div class="product-info__block">
+                            <div class="product-info__content">
+                                <div class="row m-row">
+                                    <div class="column col-lg-4 col-md-4 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">MLS® Number</span>
+                                        <span class="product-info__subtitle">C4217368</span>
+                                    </div>
+                                    <div class="column col-lg-4 col-md-4 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Property Type</span>
+                                        <span class="product-info__subtitle">Single Family</span>
+                                    </div>
+                                    <div class="column col-lg-4 col-md-4 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Building Type</span>
+                                        <span class="product-info__subtitle">House</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info__content">
+                                <div class="row m-row">
+                                    <div class="column col-lg-4 col-md-4 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Storeys</span>
+                                        <span class="product-info__subtitle">2</span>
+                                    </div>
+                                    <div class="column col-lg-4 col-md-4 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Community Name</span>
+                                        <span class="product-info__subtitle">Banbury-Don Mills</span>
+                                    </div>
+                                    <div class="column col-lg-4 col-md-4 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Title</span>
+                                        <span class="product-info__subtitle">Freehold</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info__content --modifier">
+                                <div class="row m-row">
+                                    <div class="column col-lg-4 col-md-4 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Land Size</span>
+                                        <span class="product-info__subtitle">60 x 110 ft</span>
+                                    </div>
+                                    <div class="column col-lg-4 col-md-4 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Parking Type</span>
+                                        <span class="product-info__subtitle">Garage</span>
+                                    </div>
+                                    <div class="column col-lg-4 col-md-4 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Amenities Nearby</span>
+                                        <span class="product-info__subtitle">Park, Public Transit, Schools</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="column col-lg-3 col-xs-12">
-
+                    <div class="product-form">
+                        <span class="product-form__title">Interested?</span>
+                        <p class="product-form__subtitle">Contact us for more information.</p>
+                        <form action="/">
+                            <div class="form__group-5">
+                                <input type="text" name="name" class="form__input" placeholder="name">
+                            </div>
+                            <div class="form__group-25">
+                                <input type="email" name="email" class="form__input" placeholder="email">
+                            </div>
+                            <div class="form__group-20">
+                                <textarea name="message" class="form__area" placeholder="message"></textarea>
+                            </div>
+                            <div class="form__group-20">
+                                <label for="answer" class="form__label">What is 24 + 13 ?</label>
+                                <input type="text" name="answer" id="answer" class="form__input" placeholder="answer">
+                                <button class="btn btn-reset" type="button">
+                                    <span>Change Question<i class="icon-reset"></i></span>
+                                </button>
+                            </div>
+                            <button type="submit" class="btn btn-primary --red --arrow-right">
+                                <span>send message<i class="icon-arrow-right"></i></span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div id="product-map"></div>
+    <div class="product-map">
+        <div class="container">
+            <span class="product-title">Location</span>
+            <ul class="product-tabs-list tabs-ul">
+                <li class="product-tabs-list__item">
+                    <a onclick="front.openTab(this, 'tab-0','.product-map')"
+                       class="product-tabs-list__link tab-links active">Aerial</a>
+                </li>
+                <li class="product-tabs-list__item">
+                    <a onclick="front.openTab(this, 'tab-1','.product-map')"
+                       class="product-tabs-list__link tab-links">Street Level</a>
+                </li>
+                <li class="product-tabs-list__item">
+                    <a onclick="front.openTab(this, 'tab-2','.product-map')"
+                       class="product-tabs-list__link tab-links">Neighbourhood View</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabs-wrap product-tabs__wrap">
+            <div class="tab-content active" id="tab-0">
+                <div id="product-map"></div>
+            </div>
+            <div class="tab-content " id="tab-1"></div>
+            <div class="tab-content " id="tab-2"></div>
+            <div class="tab-content " id="tab-3"></div>
+        </div>
+
+    </div>
 
 
 
 
+    <section>
+        <div class="container">
+            <div class="product-info">
+                <div class="product-info__top --panel">
+                    <span class="product-title">Building</span>
+                    <i class="icon-arrow-down product-info__icon"></i>
+                </div>
+                <div class="product-info__block">
+                    <div class="product-info__content">
+                        <div class="row m-row">
+                            <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                <span class="product-info__title">Basement Development</span>
+                                <span class="product-info__subtitle">Finished</span>
+                            </div>
+                            <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                <span class="product-info__title">Basement Features</span>
+                                <span class="product-info__subtitle">Walk-up</span>
+                            </div>
+                            <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                <span class="product-info__title">Basement Type</span>
+                                <span class="product-info__subtitle">N/A (Finished)</span>
+                            </div>
+                            <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                <span class="product-info__title">Bathrooms (Total)</span>
+                                <span class="product-info__subtitle">6</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info__content">
+                        <div class="row m-row">
+                            <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                <span class="product-info__title">Bedrooms - Above Grade</span>
+                                <span class="product-info__subtitle">4</span>
+                            </div>
+                            <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                <span class="product-info__title">Bedrooms - Below Grade</span>
+                                <span class="product-info__subtitle">2</span>
+                            </div>
+                            <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                <span class="product-info__title">Cooling</span>
+                                <span class="product-info__subtitle">Central air conditioning</span>
+                            </div>
+                            <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                <span class="product-info__title">Exterior Finish</span>
+                                <span class="product-info__subtitle">Stucco</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info__content --modifier">
+                        <div class="row m-row">
+                            <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                <span class="product-info__title">Heating Fuel</span>
+                                <span class="product-info__subtitle">Natural gas</span>
+                            </div>
+                            <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                <span class="product-info__title">Heating Type</span>
+                                <span class="product-info__subtitle">Forced air</span>
+                            </div>
+                            <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                <span class="product-info__title">Style</span>
+                                <span class="product-info__subtitle">Detached</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="product-info__top --panel">
+                    <span class="product-title">Rooms</span>
+                    <i class="icon-arrow-down product-info__icon"></i>
+                </div>
+
+                <div class="product-info__block">
+                    <ul class="product-tabs-list tabs-ul">
+                        <li class="product-tabs-list__item">
+                            <a onclick="front.openTab(this, 'product-tab-0','.product-info')"
+                               class="product-tabs-list__link tab-links active">Upper Level</a>
+                        </li>
+                        <li class="product-tabs-list__item">
+                            <a onclick="front.openTab(this, 'product-tab-1','.product-info')"
+                               class="product-tabs-list__link tab-links">Lower Level</a>
+                        </li>
+                        <li class="product-tabs-list__item">
+                            <a onclick="front.openTab(this, 'product-tab-2','.product-info')"
+                               class="product-tabs-list__link tab-links">Main Level</a>
+                        </li>
+                    </ul>
+                    <div class="tabs-wrap product-tabs__wrap">
+                        <div class="tab-content active" id="product-tab-0">
+                            <div class="product-info__content --modifier">
+                                <div class="row m-row">
+                                    <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Master bedroom</span>
+                                        <span class="product-info__subtitle">7.31 m x 4.23 m</span>
+                                    </div>
+                                    <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Bedroom</span>
+                                        <span class="product-info__subtitle">4.63 m x 3.68 m</span>
+                                    </div>
+                                    <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Bedroom</span>
+                                        <span class="product-info__subtitle">3.99 m x 3.87 m</span>
+                                    </div>
+                                    <div class="column col-md-3 col-sm-6 col-xs-6 product-info__column">
+                                        <span class="product-info__title">Bedroom</span>
+                                        <span class="product-info__subtitle">4.11 m x 3.08 m</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="product-tab-1"></div>
+                        <div class="tab-content" id="product-tab-2"></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
 
 
 
@@ -353,6 +587,36 @@
 <script src="js/libs/flickity-hash.js"></script>
 <script src="js/front.js"></script>
 <script src="js/product.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF209sTe-CRTyEbMqriIHAC_yBp-uEn8Y&callback=initMap"></script>
+<script type="text/javascript">
+    function initMap() {
+        let locations = [
+            ['Bala Park', 45.002848, -79.604434],
+        ];
+        let map = new google.maps.Map(document.getElementById('product-map'), {
+            zoom: 15,
+            center: new google.maps.LatLng(45.002848, -79.604434),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
 
+        let infowindow = new google.maps.InfoWindow();
+
+        let marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+            });
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+    }
+</script>
 </body>
 </html>
