@@ -75,8 +75,7 @@
                             </li>
                             <li class="product-soc__item">
                                 <a class="product-soc__link" onclick="window.print();">
-                                    <i class="icon-print"></i>
-                                    PRINT!
+                                    <i class="icon-print"></i>PRINT
                                 </a>
                             </li>
                         </ul>
@@ -85,6 +84,63 @@
             </div>
         </div>
     </div>
+
+
+    <div class="section product-info">
+        <div class="container">
+            <div class="row m-row">
+                <div class="column col-lg-9 col-xs-12">
+
+                </div>
+                <div class="column col-lg-3 col-xs-12">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="product-map"></div>
+
+
+
+
+
+
+
+
+
+    <div class="product-bottom">
+        <div class="container">
+            <div class="row m-row align-justify align-middle product-bottom__row">
+                <div class="column col-lg-9 col-xs-12">
+                    <p class="product-bottom__txt">MLS®, REALTOR®, and the associated logos are trademarks of The Canadian Real Estate Association.</p>
+                </div>
+                <div class="column col-lg-3 col-xs-12">
+                    <img src="img/listing-logo.jpg" alt="listing service" class="product-bottom__logo image">
+                </div>
+            </div>
+            <div class="row m-row align-justify align-middle product-bottom__items">
+                <div class="column col-lg-3 col-sm-6 col-xs-12 product-bottom__column">
+                    <span class="product-bottom__title">Data Provider</span>
+                    <p class="product-bottom__subtitle">Toronto Real Estate Board</p>
+                </div>
+                <div class="column col-lg-3 col-sm-6 col-xs-12 product-bottom__column">
+                    <span class="product-bottom__title">DDF® Listing ID</span>
+                    <p class="product-bottom__subtitle">365862898939</p>
+                </div>
+                <div class="column col-lg-3 col-sm-6 col-xs-12 product-bottom__column">
+                    <span class="product-bottom__title">Listing Office</span>
+                    <p class="product-bottom__subtitle">Ecko Jay Realty Ltd.</p>
+                </div>
+                <div class="column col-lg-3 col-sm-6 col-xs-12 product-bottom__column">
+                    <span class="product-bottom__title">Listing Updated</span>
+                    <p class="product-bottom__subtitle">June 23 2018 03:03:35</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 
@@ -176,7 +232,7 @@
         let locations = [
             ['Bala Park', 45.002848, -79.604434],
         ];
-        let map = new google.maps.Map(document.getElementById('contact-map'), {
+        let map = new google.maps.Map(document.getElementById('product-map'), {
             zoom: 15,
             center: new google.maps.LatLng(45.002848, -79.604434),
             mapTypeId: google.maps.MapTypeId.ROADMAP

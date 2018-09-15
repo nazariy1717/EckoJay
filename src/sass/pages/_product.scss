@@ -2,12 +2,13 @@
 @import "../tools/breakpoints";
 
 .product-wrapper{
-  padding: 70px 0 60px 0;
+  padding-top: 70px;
 
 
 }
 
 .product-top{
+  margin-bottom: 40px;
   &__title{
     @include title;
     margin-bottom: 5px;
@@ -26,6 +27,11 @@
       .product-soc__link{
         width: 95px;
         border: solid 1px var(--pinkish-grey);
+        i{
+          position: relative;
+          left: -4px;
+          top: 1px;
+        }
         @media (max-width: $breakpoint-sm){
           display: none;
         }
@@ -36,7 +42,7 @@
     display: block;
     width: 30px;
     height: 30px;
-    line-height: 33px;
+    line-height: 30px;
     text-align: center;
     border: solid 1px var(--pinkish-grey);
     font-size: 14px;
@@ -59,332 +65,84 @@
 
 
 
-
-
-
-.product-images{
-  height: 570px;
-  border: solid 1px #ebebeb;
-  overflow: hidden;
-  @media (max-width: $breakpoint-xl){
-    height: 420px;
-  }
-  @media (max-width: 768px){
-    height: 365px;
-  }
-  @media (max-width: 767px){
-    height: 300px;
-  }
+#product-map{
+  height: 400px;
   @media (max-width: $breakpoint-sm){
-    height: 255px;
-  }
-  ::-webkit-scrollbar
-  {
-    width: 9px;
-    height: 12px;
-  }
-
-  ::-webkit-scrollbar-track
-  {
-    background: rgba(0, 0, 0, 0);
-  }
-
-  ::-webkit-scrollbar-thumb
-  {
-    border-radius: 15px;
-    background-color: #ebebeb;
-  }
-  &__list{
-    overflow-y: scroll;
-    height: 570px;
-    margin-right: 10px;
-    margin-top: 10px;
-    padding: 0 0 10px 10px;
-    @media (max-width: $breakpoint-xl){
-      height: 420px;
-    }
-    @media (max-width: 768px){
-      height: 365px;
-    }
-    @media (max-width: 767px){
-      height: 300px;
-    }
-    @media (max-width: $breakpoint-sm){
-      height: 255px;
-    }
-  }
-  &__item{
-    padding: 3px 4px;
-    max-width: 114px;
-    display: inline-block;
-    position: relative;
-    height: 76px;
-    margin-bottom: 4px;
-    @media (max-width: $breakpoint-sm){
-      max-width: 95px;
-    }
-    @media (max-width: 374px){
-      max-width: inherit;
-    }
-    &.active{
-      &:after{
-        content: '';
-        position: absolute;
-        top: 1px;
-        right: 0;
-        left: 0;
-        bottom: 1px;
-        border: solid 4px var(--col-battleship-grey);
-        @media (max-width: $breakpoint-sm){
-          bottom: 12px;
-        }
-        @media (max-width: 374px){
-          bottom: -5px;
-        }
-      }
-    }
-    a{
-      display: block;
-    }
-    img{
-      pointer-events: none;
-    }
+    height: 300px;
   }
 }
 
 
 
-.product-form{
-  padding: 60px 0;
-  background-color: #eeeeee;
-  &__content{
-    padding: 50px 0;
+
+.product-bottom{
+  padding: 25px 0 60px 0;
+  background-color: #fafafa;
+  @media (max-width: $breakpoint-lg){
+    padding: 60px 0 70px 0;
   }
-  &__list{
-    margin-bottom: 30px;
-    li{
-      display: inline-block;
-      i{
-        font-size: 30px;
-        position: relative;
-        color: #ccc;
-        top: 3px;
-        margin-right: 5px;
-      }
-      span{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 24px;
-        font-weight: bold;
-        color: var(--col-battleship-grey);
+  @media (max-width: $breakpoint-sm){
+    padding: 60px 0 120px 0;
+  }
+  &__logo{
+    margin-left: auto;
+    margin-right: 0;
+    @media (max-width: $breakpoint-lg){
+      position: absolute;
+      left: 15px;
+      top: 200px;
+    }
+    @media (max-width: $breakpoint-sm){
+      top: 380px;
+    }
+  }
+  &__txt{
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--warm-grey);
+  }
+  &__items{
+    position: relative;
+    @media (max-width: $breakpoint-lg){
+      &:before{
+        content: '';
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        top: 65px;
+        height: 1px;
+        background-color: rgba(117, 117, 117, 0.4);
       }
     }
-    li + li{
-      margin-left: 30px;
+    @media (max-width: $breakpoint-sm){
+      &:before{
+        display: none;
+      }
+    }
+  }
+  &__row{
+    margin-bottom: 25px;
+    @media (max-width: $breakpoint-lg){
+      margin-bottom: 30px;
+    }
+  }
+  &__column{
+    margin-bottom: 20px;
+    @media (max-width: $breakpoint-lg){
+      margin-bottom: 40px;
     }
   }
   &__title{
     display: block;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--warm-grey);
+    margin-bottom: 5px;
+  }
+  &__subtitle{
+    font-size: 16px;
+    line-height: 1.5;
     color: var(--col-black);
-    margin-bottom: 20px;
-  }
-  &__btn{
-    max-width: 100%;
-    @media (max-width: $breakpoint-sm){
-      max-width: 270px;
-    }
-    i{
-      font-size: 16px;
-      position: relative;
-      top: 3px;
-      left: 5px;
-    }
-  }
-}
-
-.product-info{
-  padding: 30px 0;
-  &__block{
-    margin-bottom: 10px;
-  }
-  &__top{
-    position: relative;
-    &.--panel{
-      cursor: pointer;
-    }
-  }
-  &__bottom{
-    margin: 15px 0;
-    padding: 15px 0 5px 0;
-    border-top: 1px solid #ebebeb;
-    border-bottom: 1px solid #ebebeb;
-  }
-  &__column{
-    margin-bottom: 20px;
-    span:nth-child(2){
-      margin: 0;
-    }
-  }
-  &__icon{
-    font-size: 12px;
-    position: absolute;
-    right: 0;
-    top: 12px;
-    @include transition;
-    &.js-active{
-      transform: scale(-1);
-    }
-  }
-  &__table-wrap{
-    @media (max-width: $breakpoint-sm){
-      overflow-x: auto;
-    }
-  }
-  &__table{
-    table-layout: fixed;
-    width: 100%;
-    margin-bottom: 20px;
-    @media (max-width: $breakpoint-sm){
-      width: 550px;
-    }
-    th{
-      padding: 10px 0;
-      text-align: left;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 14px;
-      line-height: 22px;
-      color: var(--col-battleship-grey);
-      font-weight: bold;
-    }
-    td{
-      padding: 10px 0;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
-      color: var(--col-warm-grey);
-    }
-  }
-  &__list-circle{
-    padding-left: 20px;
-    list-style-type: disc;
-    margin-bottom: 20px;
-    li{
-      display: list-item;
-      margin-bottom: 10px;
-    }
-  }
-  &__image{
-    float: right;
-  }
-}
-
-.broker-column-row{
-  @media (max-width: $breakpoint-lg){
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    margin-top: 30px;
-  }
-}
-.broker-column{
-  max-width: 270px;
-  border: solid 1px #ebebeb;
-  padding: 15px;
-  margin-bottom: 30px;
-  @media (max-width: $breakpoint-lg){
-    & + & {
-      margin-left: 30px;
-      @media (max-width: 620px){
-        margin-left: 0;
-      }
-    }
-  }
-  &__top{
-    padding-bottom: 20px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #ebebeb;
-  }
-  &__image{
-    display: block;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-  &__name{
-    span{
-      display: block;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 14px;
-      line-height: 1.57;
-      color: var(--col-black);
-    }
-    span:nth-child(1){
-      font-weight: bold;
-    }
-    span:nth-child(2){
-      font-weight: normal;
-      font-style: italic;
-    }
-  }
-  &__txt{
-    display: block;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.57;
-    color: var(--col-black);
-  }
-}
-
-.product-tabs{
-  &__list{}
-  &__wrap{
-    padding: 0;
-    background-color: transparent;
-    margin-bottom: 20px;
-  }
-  &__list-item{
-    display: inline-block;
-  }
-  &__list-link{
-    display: block;
-    height: 50px;
-    padding: 0 15px;
-    border-radius: 3px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 50px;
-    color: var(--col-black);
-    border: solid 1px transparent;
-    @media (max-width: $breakpoint-sm){
-      padding: 0 5px;
-      font-size: 11px;
-      height: 35px;
-      line-height: 35px;
-
-    }
-    &.active{
-      border: solid 1px #ebebeb;
-    }
-  }
-}
-
-#product_map{
-  height: 500px;
-  @media (max-width: $breakpoint-md){
-    height: 400px;
-  }
-  @media (max-width: $breakpoint-sm){
-    height: 300px;
   }
 }
