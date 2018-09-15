@@ -1,124 +1,31 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
-.product{
-  padding-top: 60px;
-  &__name{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    font-weight: 600;
+.product-wrapper{
+  padding: 70px 0 60px 0;
+
+
+}
+
+.product-top{
+  &__title{
+    @include title;
+    margin-bottom: 5px;
+  }
+  &__subtitle{
+    font-size: 20px;
     line-height: normal;
-    color: var(--col-black);
-    @media (max-width: $breakpoint-sm){
-      font-size: 24px;
-    }
-  }
-  &__price{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    font-weight: 800;
-    line-height: 1.1;
-    color: var(--col-black);
-    @media (max-width: $breakpoint-sm){
-      font-size: 24px;
-    }
-  }
-  &__code{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 24px;
-    font-weight: normal;
-    line-height: normal;
-    color: #666;
-    @media (max-width: $breakpoint-sm){
-      font-size: 18px;
-    }
-  }
-  &__top{
-    margin-bottom: 10px;
-  }
-  &__bottom{
-    margin-bottom: 25px;
-  }
-
-  &__column{
-    margin-bottom: 30px;
-  }
-  &__carousel{
-    position: relative;
-    overflow: hidden;
-    //height: 570px;
-    @media (max-width: $breakpoint-xl){
-      //height: 420px;
-    }
-    img{
-      @media (max-width: $breakpoint-lg){
-        max-width: 100%;
-      }
-    }
-  }
-}
-
-.product-carousel-column{
-  @media (max-width: $breakpoint-xl){
-    @include grid-size(calc(100% - 300px));
-  }
-  @media (max-width: $breakpoint-lg){
-    @include grid-size(calc(100% - 180px));
-  }
-  @media (max-width: 767px){
-    @include grid-size(100%);
-  }
-}
-.product-images-column{
-  @media (max-width: $breakpoint-xl){
-    @include grid-size(300px);
-  }
-  @media (max-width: $breakpoint-lg){
-    @include grid-size(180px);
-  }
-  @media (max-width: 767px){
-    @include grid-size(100%);
-  }
-}
-
-
-.product-prev{
-  margin-bottom: 30px;
-  a{
-    display: inline-block;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    color: var(--col-warm-grey);
-    &:hover{
-      color: var(--col-black);
-    }
+    color: var(--warm-grey);
   }
 }
 
 .product-soc{
-  &__list{}
   &__item{
-    display: table-cell;
-    &:nth-child(1){
-      .product-soc__link{
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px;
-      }
-    }
-    &:nth-last-child(2){
-      .product-soc__link{
-        border-right: solid 1px #ebebeb;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-      }
-    }
+    display: inline-block;
     &:last-child{
       .product-soc__link{
-        margin-left: 10px;
-        width: 104px;
-        border-radius: 3px;
-        border-right: solid 1px #ebebeb;
+        width: 95px;
+        border: solid 1px var(--pinkish-grey);
         @media (max-width: $breakpoint-sm){
           display: none;
         }
@@ -127,32 +34,32 @@
   }
   &__link{
     display: block;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
+    width: 30px;
+    height: 30px;
+    line-height: 33px;
     text-align: center;
-    border: solid 1px #ebebeb;
-    border-right: 0;
-    font-family: 'Open Sans', sans-serif;
+    border: solid 1px var(--pinkish-grey);
     font-size: 14px;
     font-weight: bold;
-    color: var(--col-battleship-grey);
+    color: var(--col-black);
     @include transition;
     &:hover{
       background-color: #ebebeb;
     }
     i{
-      font-size: 16px;
+      font-size: 14px;
     }
     .icon-facebook{ color: #6081c4; }
-    .icon-mail2{ color: #6b7d7b; }
-    .icon-play{ color: #f15a4b; }
     .icon-google-plus{ color: #e62b33; }
     .icon-twitter{ color: #43bdef; }
     .icon-linkedin2{ color: #2797cf; }
     .icon-pinterest{ color: #e62b33; }
   }
 }
+
+
+
+
 
 
 .product-images{

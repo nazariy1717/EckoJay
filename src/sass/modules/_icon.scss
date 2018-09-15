@@ -21,36 +21,44 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.icon-pinterest:before {
+  content: "\e907";
+}
+.icon-print:before {
+  content: "\e908";
+}
 .icon-arrow-right:before {
   content: "\e906";
 }
 .icon-mail:before {
-  content: "\e902";font-size: 12px;
+  content: "\e902";
 }
 .icon-fax:before {
-  content: "\e903";font-size: 12px;
+  content: "\e903";
 }
 .icon-phone:before {
-  content: "\e904";font-size: 18px;
+  content: "\e904";
 }
 .icon-marker:before {
-  content: "\e905";font-size: 18px;
-}
-.icon-newsletter:before {
-  content: "\e900";
+  content: "\e905";
 }
 .icon-arrow-down:before {
   content: "\e901";
 }
-
-
-
+.icon-newsletter:before {
+  content: "\e900";
+}
+.icon-google-plus:before {
+  content: "\ea8b";
+}
 .icon-facebook:before {
   content: "\ea90";
 }
 .icon-instagram:before {
   content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
 }
 .icon-linkedin2:before {
   content: "\eaca";
