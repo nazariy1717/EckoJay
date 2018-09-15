@@ -21,6 +21,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-car:before {
+  content: "\e90b";
+}
+.icon-shower:before {
+  content: "\e90c";
+}
+.icon-bedroom:before {
+  content: "\e90d";
+}
+
 .icon-play:before {
   content: "\e90a";
 }
