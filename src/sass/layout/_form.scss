@@ -70,15 +70,34 @@ input[type=number]::-webkit-outer-spin-button {
       border-bottom: 1px solid var(--warm-grey);
       &:focus{
         color: #fff;
-        border-bottom: 1px solid #fff;
       }
+    }
+    &.--lowercase{
+      text-transform: capitalize;
     }
     &:focus{
       color: var(--col-black);
-      border-bottom: 1px solid var(--col-black);
     }
   }
 
+  &__select{
+    font-weight: 600;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: var(--col-black);
+    option:hover{
+      background-color: var(--col-black);
+    }
+  }
+
+  &__select-icon{
+    position: absolute;
+    right: 5px;
+    top: 17px;
+    font-size: 7px;
+    color: var(--warm-grey);
+  }
 
   input:disabled {
     cursor: not-allowed;
@@ -194,7 +213,18 @@ input[type=range]::-moz-focus-outer {
 
 
 
-
+.--lowercase::-webkit-input-placeholder {
+  text-transform: capitalize;
+}
+.--lowercase::-moz-placeholder {
+  text-transform: capitalize;
+}
+.--lowercase:-ms-input-placeholder {
+  text-transform: capitalize;
+}
+.--lowercase:-moz-placeholder {
+  text-transform: capitalize;
+}
 
 ::-webkit-input-placeholder {
   font-family: 'Montserrat',sans-serif;

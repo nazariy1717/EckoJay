@@ -35,8 +35,119 @@
         <div class="row m-row">
             <div class="column col-lg-3">
                 <h1 class="app-title search__title">Search</h1>
+
+                <div class="search-sidebar">
+                    <form action="/">
+                        <div class="form__group-5">
+                            <select name="search-property" class="form__select --lowercase">
+                                <option value="0">All Property Types</option>
+                                <option value="1">Property 1</option>
+                            </select>
+                            <i class="icon-arrow-down form__select-icon"></i>
+                        </div>
+                        <div class="form__group-5">
+                            <select name="search-business" class="form__select --lowercase">
+                                <option value="0">All Business Types</option>
+                                <option value="1">Business 1</option>
+                            </select>
+                            <i class="icon-arrow-down form__select-icon"></i>
+                        </div>
+                        <div class="form__group-5">
+                            <select name="search-transaction" class="form__select --lowercase">
+                                <option value="0">All Transaction Types</option>
+                                <option value="1">Transaction 1</option>
+                            </select>
+                            <i class="icon-arrow-down form__select-icon"></i>
+                        </div>
+                        <div class="form__group-5">
+                            <select name="search-building" class="form__select --lowercase">
+                                <option value="0">All Building Types</option>
+                                <option value="1">Building 1</option>
+                            </select>
+                            <i class="icon-arrow-down form__select-icon"></i>
+                        </div>
+                        <div class="form__group-5">
+                            <input type="search" name="search-street" class="form__input --lowercase" placeholder="Enter Street Name">
+                        </div>
+                        <div class="form__group-5">
+                            <input type="search" name="search-city" class="form__input --lowercase" placeholder="Enter City">
+                        </div>
+                        <div class="form__group-5">
+                            <input type="search" name="search-neighbourhood" class="form__input --lowercase" placeholder="Enter Neighbourhood">
+                        </div>
+                        <div class="form__group-5">
+                            <select name="search-provinces" class="form__select --lowercase">
+                                <option value="0">All Provinces</option>
+                                <option value="1">Provinces 1</option>
+                            </select>
+                            <i class="icon-arrow-down form__select-icon"></i>
+                        </div>
+
+                        <div class="form__group-5">
+                            <input type="text" name="search-postal-code" class="form__input --lowercase" placeholder="Enter Postal Code">
+                        </div>
+                        <div class="form__group-5">
+                            <input type="text" name="search-pr-code" class="form__input --lowercase" placeholder="Enter MLS® or RP Number">
+                        </div>
+
+
+                    </form>
+                </div>
             </div>
             <div class="column col-lg-9">
+
+                <div class="row m-row align-middle align-justify">
+                    <div class="column">
+                        <div class="search-date">
+                            <select name="search-date" class="form__select --lowercase">
+                                <option value="0">Date (Newest to Oldest)</option>
+                                <option value="1">Date Newest</option>
+                            </select>
+                            <i class="icon-arrow-down form__select-icon"></i>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <ul class="search-list-count">
+                            <li class="search-list-count__item">
+                                <a href="/" class="search-list-count__link active">12</a>
+                            </li>
+                            <li class="search-list-count__item">
+                                <a href="/" class="search-list-count__link">24</a>
+                            </li>
+                            <li class="search-list-count__item">
+                                <a href="/" class="search-list-count__link">48</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row m-row align-middle align-justify">
+                    <div class="column">
+                        <div class="search-result">
+                            <span>3405</span> results | Page <span>1</span> of <span>142</span>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <ul class="search-filter">
+                            <li class="search-filter__item">
+                                <a href="/" class="search-filter__link active">
+                                    <i class="icon-grid"></i>
+                                </a>
+                            </li>
+                            <li class="search-filter__item">
+                                <a href="/" class="search-filter__link">
+                                    <i class="icon-list"></i>
+                                </a>
+                            </li>
+                            <li class="search-filter__item">
+                                <a href="/" class="search-filter__link">
+                                    <i class="icon-marker2"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
 
                 <div class="pagination">
                     <ul class="pagination__list">
@@ -200,6 +311,7 @@
 
 <script src="js/libs/jquery-3.2.1.min.js"></script>
 <script src="js/front.js"></script>
+<script src="js/search.js"></script>
 
 
 </body>
