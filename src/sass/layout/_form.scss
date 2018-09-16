@@ -254,3 +254,140 @@ input[type=range]::-moz-focus-outer {
   font-weight: 500;
   text-transform: uppercase;
 }
+
+
+
+.checkbox {
+  position: relative;
+  label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.54;
+    color: var(--col-black);
+    user-select: none;
+  }
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 15px;
+  height: 15px;
+  background-color: #efefef;
+
+}
+
+
+
+[type="checkbox"]:checked + label:after {
+  content: "\e915";
+  font-family: 'icomoon' !important;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #fff;
+  font-size: 8px;
+  text-align: center;
+  line-height: 15px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--rouge);
+  @include transition;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color:  #d0d0d0;
+  background-color: #d0d0d0;
+}
+
+[type="checkbox"]:disabled:checked + label:after {
+  color: #fff;
+}
+
+[type="checkbox"]:disabled + label {
+  //color: #aaa;
+}
+
+
+
+.check {
+  display: block;
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 8px;
+  right: 0;
+  z-index: 5;
+  background-color: #efefef;
+  transition: all .25s;
+}
+
+.check::before {
+  display: block;
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  top: -1px;
+  right: -1px;
+  margin: auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+}
+
+.radio__form{
+  position: relative;
+  label{
+    display: block;
+    padding-right: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 9;
+  }
+  input[type=radio] {
+    right: 0;
+    margin: 0;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+input[type=radio]:checked ~ .check::before {
+  background: var(--col-red);
+}
+input[type=radio]:checked ~ label {
+  color: var(--main396);
+}

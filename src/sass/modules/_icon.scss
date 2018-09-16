@@ -21,6 +21,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-search:before {
+  content: "\e916";
+}
+.icon-check:before {
+  content: "\e915";
+}
 .icon-marker2:before {
   content: "\e912";
 }

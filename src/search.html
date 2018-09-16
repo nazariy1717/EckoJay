@@ -5,6 +5,8 @@
     <title>search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 </head>
 <body>
 
@@ -66,6 +68,12 @@
                             </select>
                             <i class="icon-arrow-down form__select-icon"></i>
                         </div>
+                        <div class="form__group-15">
+                            <label for="" class="form__label">Price</label>
+                            <div id="slider">
+                                <div id="custom-handle" class="ui-slider-handle"></div>
+                            </div>
+                        </div>
                         <div class="form__group-5">
                             <input type="search" name="search-street" class="form__input --lowercase" placeholder="Enter Street Name">
                         </div>
@@ -86,11 +94,36 @@
                         <div class="form__group-5">
                             <input type="text" name="search-postal-code" class="form__input --lowercase" placeholder="Enter Postal Code">
                         </div>
-                        <div class="form__group-5">
+                        <div class="form__group-25">
                             <input type="text" name="search-pr-code" class="form__input --lowercase" placeholder="Enter MLS® or RP Number">
                         </div>
-
-
+                        <div class="form__group-5">
+                           <div class="checkbox">
+                               <input type="checkbox" name="condominium" id="search-check-1">
+                               <label for="search-check-1">Condominium</label>
+                           </div>
+                        </div>
+                        <div class="form__group-5">
+                            <div class="checkbox">
+                                <input type="checkbox" name="pool" id="search-check-2">
+                                <label for="search-check-2">Pool</label>
+                            </div>
+                        </div>
+                        <div class="form__group-5">
+                            <div class="checkbox">
+                                <input type="checkbox" name="waterfront" id="search-check-3">
+                                <label for="search-check-3">Waterfront</label>
+                            </div>
+                        </div>
+                        <div class="form__group-30">
+                            <div class="checkbox">
+                                <input type="checkbox" name="open_house" id="search-check-4">
+                                <label for="search-check-4">Open House</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-search">
+                            <span>Search<i class="icon-search"></i></span>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -310,6 +343,7 @@
 </div>
 
 <script src="js/libs/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/front.js"></script>
 <script src="js/search.js"></script>
 
