@@ -92,3 +92,42 @@
   }
 }
 
+.btn-secondary{
+  display: block;
+  position: relative;
+  max-width: 370px;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  border: solid 1px var(--rouge);
+  color: var(--rouge);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.3s;
+  span{
+    display: block;
+    transition: all 0.3s;
+  }
+  i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    font-size: 14px;
+    color: #fff;
+  }
+  &:hover{
+    color: #fff;
+    background-color: var(--rouge);
+    span{
+      transform: translateX(-20px);
+    }
+    i{
+      opacity: 1;
+      transform: translate(calc(-50% + 45px),-50%);
+    }
+  }
+}
