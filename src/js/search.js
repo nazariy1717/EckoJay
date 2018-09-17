@@ -54,6 +54,18 @@ let search = {
             }
         });
 
+        $(document).on('click', '.js-list-grid-link', function () {
+            $('.search-filter__link').removeClass('active');
+            $(this).addClass('active');
+            $('.search-product-content').addClass('js-grid-view');
+
+        });
+
+        $(document).on('click', '.js-list-view-link', function () {
+            $('.search-filter__link').removeClass('active');
+            $(this).addClass('active');
+            $('.search-product-content').removeClass('js-grid-view');
+        });
 
 
 

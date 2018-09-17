@@ -34,7 +34,7 @@
 <div class="search">
     <div class="container">
         <div class="row m-row">
-            <div class="column col-lg-3">
+            <div class="column col-lg-3 col-xs-12 search__column-left">
                 <h1 class="app-title search__title">Search</h1>
 
                 <div class="search-sidebar">
@@ -141,10 +141,10 @@
                     </form>
                 </div>
             </div>
-            <div class="column col-lg-9">
+            <div class="column col-lg-9 col-xs-12 search__column-right">
 
                 <div class="row m-row align-middle align-justify">
-                    <div class="column">
+                    <div class="column col-sm-6 col-xs-12">
                         <div class="search-date">
                             <select name="search-date" class="form__select --lowercase">
                                 <option value="0">Date (Newest to Oldest)</option>
@@ -153,7 +153,7 @@
                             <i class="icon-arrow-down form__select-icon"></i>
                         </div>
                     </div>
-                    <div class="column">
+                    <div class="column col-sm-6 col-xs-12">
                         <ul class="search-list-count">
                             <li class="search-list-count__item">
                                 <a href="/" class="search-list-count__link active">12</a>
@@ -169,29 +169,104 @@
                 </div>
 
                 <div class="row m-row align-middle align-justify">
-                    <div class="column">
+                    <div class="column col-sm-6 col-xs-12">
                         <div class="search-result">
                             <span>3405</span> results | Page <span>1</span> of <span>142</span>
                         </div>
                     </div>
-                    <div class="column">
+                    <div class="column col-sm-6 col-xs-12">
                         <ul class="search-filter">
                             <li class="search-filter__item">
-                                <a href="/" class="search-filter__link active">
+                                <a  class="search-filter__link js-list-grid-link active">
                                     <i class="icon-grid"></i>
                                 </a>
                             </li>
                             <li class="search-filter__item">
-                                <a href="/" class="search-filter__link">
+                                <a  class="search-filter__link js-list-view-link">
                                     <i class="icon-list"></i>
                                 </a>
                             </li>
                             <li class="search-filter__item">
-                                <a href="/" class="search-filter__link">
+                                <a  class="search-filter__link">
                                     <i class="icon-marker2"></i>
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+
+                <!-- todo if grid list add class js-grid-view-->
+                <div class="search-product-content js-grid-view">
+                    <div class="row m-row">
+
+                        <div class="column product-item__column">
+                            <div class="product-item">
+                                <div class="row m-row">
+                                    <div class="column product-item__image-column">
+                                        <a href="/">
+                                            <div class="product-item__image" style="background-image: url(img/product-item.jpg);"></div>
+                                            <div class="product-item__price">$1,588,800</div>
+                                            <div class="product-item__overlay">
+                                                <a href="/" class="btn btn-primary --red --arrow-right">
+                                                    <span>VIEW <i class="icon-arrow-right"></i></span>
+                                                </a>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="column product-item__content-column">
+                                        <div class="product-item__content">
+                                            <a href="/" class="btn btn-secondary product-item__link">
+                                                <span>VIEW</span>
+                                                <i class="icon-arrow-right"></i>
+                                            </a>
+                                            <span class="product-item__title">30 Tardree Place</span>
+                                            <p class="product-item__city">Toronto, ON</p>
+                                            <ul class="product-item__list">
+                                                <li><i class="icon-bedroom"></i>3+2</li>
+                                                <li><i class="icon-shower"></i>4</li>
+                                                <li><i class="icon-car"></i>4</li>
+                                            </ul>
+                                            <p class="product-item__desc">Newly built, modern, sun filled, magazine-worthy, 3+2 bedroom home with stunning curb appeal. 4,200 sq. ft. of luxury (including bright walk-out lower level) on a huge pie-shaped, private lot (rear 81 ft) at the end of a much sought-after, exclusive cul-de-sac in the desirable Wexford/Maryvale neighbourhood. This…</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column product-item__column">
+                            <div class="product-item">
+                                <div class="row m-row">
+                                    <div class="column product-item__image-column">
+                                        <a href="/">
+                                            <div class="product-item__image" style="background-image: url(img/product-item.jpg);"></div>
+                                            <div class="product-item__price">$1,588,800</div>
+                                            <div class="product-item__overlay">
+                                                <a href="/" class="btn btn-primary --red --arrow-right">
+                                                    <span>VIEW <i class="icon-arrow-right"></i></span>
+                                                </a>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="column product-item__content-column">
+                                        <div class="product-item__content">
+                                            <a href="/" class="btn btn-secondary product-item__link">
+                                                <span>VIEW</span>
+                                                <i class="icon-arrow-right"></i>
+                                            </a>
+                                            <span class="product-item__title">30 Tardree Place</span>
+                                            <p class="product-item__city">Toronto, ON</p>
+                                            <ul class="product-item__list">
+                                                <li><i class="icon-bedroom"></i>3+2</li>
+                                                <li><i class="icon-shower"></i>4</li>
+                                                <li><i class="icon-car"></i>4</li>
+                                            </ul>
+                                            <p class="product-item__desc">Newly built, modern, sun filled, magazine-worthy, 3+2 bedroom home with stunning curb appeal. 4,200 sq. ft. of luxury (including bright walk-out lower level) on a huge pie-shaped, private lot (rear 81 ft) at the end of a much sought-after, exclusive cul-de-sac in the desirable Wexford/Maryvale neighbourhood. This…</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 

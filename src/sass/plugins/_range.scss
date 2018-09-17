@@ -746,6 +746,8 @@ button.ui-button::-moz-focus-inner {
   span{
     position: absolute;
     top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     color: var(--warm-grey);
