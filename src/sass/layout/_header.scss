@@ -61,6 +61,9 @@
       .header-list__btn{
         i{
           transform: scale(-1);
+          @media (max-width: $breakpoint-xl){
+            transform: none;
+          }
         }
       }
     }
@@ -123,7 +126,7 @@
         background-color: var(--rouge);
         i{
           color: #fff;
-          transform: scale(-1);
+          transform: scale(-1)!important;
         }
       }
     }
