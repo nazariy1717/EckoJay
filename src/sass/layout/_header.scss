@@ -32,17 +32,36 @@
     right: 0;
     top: 90px;
     bottom: 0;
+    padding: 15px;
     background-color: #fff;
+    text-align: left;
   }
   &__item{
+    position: relative;
     display: inline-block;
     @media (max-width: $breakpoint-xl){
       display: block;
+      margin-bottom: 20px;
+    }
+    @media (max-width: $breakpoint-sm){
+      margin-bottom: 5px;
     }
     & + & {
       margin-left: 30px;
       @media (max-width: $breakpoint-xl){
         margin-left: 0;
+      }
+    }
+    &:hover{
+      > .header-sublist{
+        @media (min-width: 991px){
+          display: block;
+        }
+      }
+      .header-list__btn{
+        i{
+          transform: scale(-1);
+        }
       }
     }
   }
@@ -51,24 +70,40 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 600;
+    height: 90px;
+    line-height: 90px;
     color: var(--col-black);
     display: block;
     text-transform: uppercase;
     transition: all 0.3s;
+    @media (max-width: $breakpoint-xl){
+      height: 45px;
+      line-height:  45px;
+      padding: 0 15px;
+    }
     &.active{
       color: var(--rouge);
+      @media (max-width: $breakpoint-xl){
+        color: var(--rouge);
+      }
       &:before{
         content: '';
         position: absolute;
         left: -2px;
         right: -2px;
-        bottom: 0;
+        bottom: 30px;
         height: 2px;
         background-color: var(--rouge);
+        @media (max-width: $breakpoint-xl){
+          display: none;
+        }
       }
     }
     &:hover{
       color: var(--rouge);
+      @media (max-width: $breakpoint-xl){
+        color: initial;
+      }
     }
   }
   &__newsletter{
@@ -82,13 +117,30 @@
   &__btn{
     @extend .header-list__link;
     padding-right: 20px;
+    &.active{
+      @media (max-width: $breakpoint-sm){
+        color: #fff;
+        background-color: var(--rouge);
+        i{
+          color: #fff;
+          transform: scale(-1);
+        }
+      }
+    }
     i{
       position: absolute;
       font-size: 8px;
       color: var(--col-black);
       right: 0;
-      top: 8px;
+      top: 42px;
       transition: all 0.3s;
+      @media (max-width: $breakpoint-xl){
+        right: 10px;
+        top: 17px;
+      }
+      @media (max-width: $breakpoint-xl){
+        color: initial;
+      }
     }
 
   }
@@ -98,6 +150,37 @@
 
 .header-sublist{
   display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 250px;
+  text-align: left;
+  padding: 5px;
+  background-color: #fff;
+  @media (max-width: $breakpoint-xl){
+    position: relative;
+    width: 100%;
+    padding-left: 45px;
+  }
+  &.active{
+    display: block;
+  }
+  &__item{
+    display: block;
+    margin-bottom: 15px;
+  }
+  &__link{
+    display: inline-block;
+    font-size: 14px;
+    color: var(--warm-grey);
+    transition: all 0.3s;
+    &:hover{
+      color: var(--rouge);
+    }
+    &.active{
+      color: var(--rouge);
+    }
+  }
 }
 
 

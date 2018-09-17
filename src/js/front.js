@@ -41,9 +41,19 @@ let front = {
     events: function () {
         let self = this;
 
+        $(document).on('click', '.header-list__btn', function () {
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                console.log('dasd');
+                $(this).toggleClass('active');
+                $(this).parent().find('.header-sublist').toggleClass('active');
+            }
+        });
+
         $(document).on('click', '.hamburger', function () {
             self.toogleNav();
         });
+
+
 
 
     }
