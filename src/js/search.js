@@ -9,20 +9,51 @@ let search = {
     events: function () {
         let self = this;
 
+        $( "#slider-bedrooms" ).slider({
+            range: true,
+            min: 0,
+            max: 10,
+            values: [ 0, 6 ],
+            create: function() {
+                $( "#bedrooms-handle1" ).find('span').text('0' );
+                $( "#bedrooms-handle2" ).find('span').text('6' );
+            },
+            slide: function( event, ui ) {
+                $( "#bedrooms-handle1" ).find('span').text(ui.values[ 0 ] );
+                $( "#bedrooms-handle2" ).find('span').text(ui.values[ 1 ] );
+            }
+        });
 
-        $( function() {
-            var handle = $( "#custom-handle" );
-            $( "#slider" ).slider({
-                min: 0,
-                max: 1000000,
-                create: function() {
-                    handle.text( $( this ).slider( "value" ) );
-                },
-                slide: function( event, ui ) {
-                    handle.text( ui.value );
-                }
-            });
-        } );
+        $( "#slider-bathrooms" ).slider({
+            range: true,
+            min: 0,
+            max: 10,
+            values: [ 0, 10 ],
+            create: function() {
+                $( "#bathrooms-handle1" ).find('span').text('0' );
+                $( "#bathrooms-handle2" ).find('span').text('10' );
+            },
+            slide: function( event, ui ) {
+                $( "#bathrooms-handle1" ).find('span').text(ui.values[ 0 ] );
+                $( "#bathrooms-handle2" ).find('span').text(ui.values[ 1 ] );
+            }
+        });
+
+        $( "#slider-price" ).slider({
+            range: true,
+            min: 0,
+            max: 1000000,
+            values: [ 0, 900000 ],
+            create: function() {
+                $( "#price-handle1" ).find('span').text( "$" + '0' );
+                $( "#price-handle2" ).find('span').text( "$" + '900000' );
+            },
+            slide: function( event, ui ) {
+                $( "#price-handle1" ).find('span').text( "$" + ui.values[ 0 ] );
+                $( "#price-handle2" ).find('span').text( "$" + ui.values[ 1 ] );
+            }
+        });
+
 
 
 
