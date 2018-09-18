@@ -20,7 +20,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-quote:before {
+  content: "\e918";
+}
+.icon-scroll-down:before {
+  content: "\e917";
+}
 .icon-search:before {
   content: "\e916";
 }

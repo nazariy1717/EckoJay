@@ -147,6 +147,17 @@
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   transition: background 0.3s;
+  &.--modifier{
+    border: 0;
+    background-color: var(--rouge);
+    color: #fff;
+    i{
+      color: #fff;
+    }
+    &:hover{
+      background-color: var(--col-black);
+    }
+  }
   span{
     position: relative;
     padding-left: 25px;
@@ -164,5 +175,25 @@
     i{
       color: #fff;
     }
+  }
+}
+
+
+.btn-scroll{
+  display: table;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 30px auto auto;
+  span{
+    position: relative;
+    padding-left: 20px;
+  }
+  i{
+    position: absolute;
+    left: 3px;
+    top: 2px;
   }
 }

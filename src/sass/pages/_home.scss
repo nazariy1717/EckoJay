@@ -1,6 +1,82 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
+.app-home{
+  position: relative;
+  height: 730px;
+  margin-top: 90px;
+  background-color: #ccc;
+}
+
+.home-search{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  max-width: 1920px;
+  margin: auto;
+  &__left-column{
+    @include grid-size(calc(100% - 70.55555%));
+  }
+  &__right-column{
+    @include grid-size(70.55555%);
+  }
+  &__form{
+    position: relative;
+    ::-webkit-input-placeholder {
+      text-transform: capitalize;
+      font-size: 16px;
+    }
+    ::-moz-placeholder {
+      text-transform: capitalize;
+      font-size: 16px;
+    }
+    :-ms-input-placeholder {
+      text-transform: capitalize;
+      font-size: 16px;
+    }
+    :-moz-placeholder {
+      text-transform: capitalize;
+      font-size: 16px;
+    }
+  }
+  &__input{
+    height: 80px;
+    border: 0;
+    padding-right: 365px;
+    outline: none;
+    padding: 0 30px;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--pinkish-grey);
+    background-color: rgba(0,0,0,0.6);
+    &:focus{
+      color: var(--pinkish-grey);
+    }
+  }
+  &__btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 80px;
+    max-width: 365px;
+  }
+}
+
+
+.app-featured{
+  padding: 90px 0;
+  background-color: #fafafa;
+  &__title{
+    margin-bottom: 25px;
+  }
+  &__txt{
+    margin-bottom: 40px;
+  }
+}
+
+
 
 .app-succeed{
   &__title{
