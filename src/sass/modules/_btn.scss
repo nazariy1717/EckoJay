@@ -119,6 +119,15 @@
     font-size: 14px;
     color: #fff;
   }
+  &.--white{
+    border: solid 1px #fff;
+    color: #fff;
+    text-transform: uppercase;
+    &:hover{
+      border: solid 1px var(--col-black);
+      background-color: var(--col-black);
+    }
+  }
   &:hover{
     color: #fff;
     background-color: var(--rouge);

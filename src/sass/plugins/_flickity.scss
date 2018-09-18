@@ -40,6 +40,53 @@
   cursor: grabbing;
 }
 
+
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  transform: translateY(-50%);
+  background-color: var(--rouge);
+  transition: all 0.3s;
+  @media (max-width: $breakpoint-lg){
+    transform: translateY(-0);
+    top: -70px;
+  }
+  &:hover{
+    background-color: var(--col-black);
+  }
+  &:before{
+    content: '\e906';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'icomoon', sans-serif;
+    font-size: 11px;
+    color: #fff;
+  }
+}
+.flickity-prev-next-button.previous {
+  &:before{
+    transform: translate(-50%,-50%) scale(-1);
+  }
+}
+.flickity-prev-next-button.next {
+
+}
+
+.flickity-button:disabled {
+  background-color: var(--pinkish-grey);
+  cursor: auto;
+  pointer-events: none;
+}
+
+
+
 .flickity-prev-next-button:focus {
   outline: none;
 }
