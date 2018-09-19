@@ -4,6 +4,7 @@ let home = {
     home_carousel: '',
     featured_carousel: '',
     listing_carousel: '',
+    testimonials_carousel: '',
 
     slider_options_default: {
         wrapAround: true,
@@ -21,6 +22,7 @@ let home = {
         this.home_carousel = this.newSlider('.app-home__carousel', { prevNextButtons: false});
         this.featured_carousel = this.newSlider('.app-featured__carousel', { prevNextButtons: false});
         this.listing_carousel = this.newSlider('.app-listing__carousel');
+        this.testimonials_carousel = this.newSlider('.testimonials-quote__carousel',{ prevNextButtons: false});
     },
 
     newSlider: function (selector, options) {
@@ -43,11 +45,19 @@ let home = {
         $('.app-home__next').on( 'click', function() {
             self.home_carousel.next();
         });
+
         $('.app-featured__prev').on( 'click', function() {
             self.featured_carousel.previous();
         });
         $('.app-featured__next').on( 'click', function() {
             self.featured_carousel.next();
+        });
+
+        $('.app-testimonials__prev').on( 'click', function() {
+            self.testimonials_carousel.previous();
+        });
+        $('.app-testimonials__next').on( 'click', function() {
+            self.testimonials_carousel.next();
         });
 
     }
