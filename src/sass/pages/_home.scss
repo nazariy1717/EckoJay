@@ -394,6 +394,7 @@
     text-align: center;
     display: block;
     font-size: 45px;
+    height: 45px;
     color: var(--rouge);
     margin-bottom: 25px;
   }
@@ -432,14 +433,11 @@
     padding-top: 125px;
     max-width: 1440px;
     margin: auto;
-    @media(max-width: $breakpoint-lg){
-      padding-top: 100px;
-    }
-    @media(max-width: $breakpoint-sm){
-      padding-top: 80px;
+    @media(max-width: $breakpoint-xl){
+      height: 625px;
+      padding-top: 60px;
     }
   }
-
 
   &__subtitle{
     display: inline-block;
@@ -483,6 +481,9 @@
     margin: auto;
     text-align: left;
     z-index: 9;
+    @media(max-width: $breakpoint-xl){
+      display: none;
+    }
     li{
       display: inline-block;
       button{
@@ -510,7 +511,10 @@
     width: 100%;
     z-index: 9;
     @media(max-width: $breakpoint-xl){
-      max-width: 550px;
+      max-width: 605px;
+    }
+    @media(max-width: $breakpoint-sm){
+      max-width: 320px;
     }
     &:before{
       content: '\e918';
@@ -530,7 +534,10 @@
     padding: 60px 125px 55px 40px;
     background-color: rgba(255,255,255,0.8);
     @media(max-width: $breakpoint-xl){
-      padding: 40px;
+      padding: 90px 30px 65px 50px;
+    }
+    @media(max-width: $breakpoint-sm){
+      padding: 60px 20px 35px 40px;
     }
   }
   &__txt{
@@ -539,10 +546,7 @@
     line-height: 1.63;
     color: var(--col-black);
     margin-bottom: 25px;
-    @media(max-width: $breakpoint-xl){
-      line-height: 1.5;
-      margin-bottom: 15px;
-    }
+
   }
   &__author{
     display: block;
