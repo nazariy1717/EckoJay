@@ -20,6 +20,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-close:before {
+  content: "\e919";
+}
 .icon-quote:before {
   content: "\e918";
 }

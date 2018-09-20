@@ -21,9 +21,34 @@
   &__logo{
     max-width: 180px;
   }
+  .custom-logo{
+    @media (max-width: $breakpoint-sm) {
+      max-width: 100px;
+      height: initial;
+      width: initial;
+    }
+  }
+}
+
+.container-newsletter{
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  @media (max-width: 1200px){
+    right: 75px;
+    top: 20px;
+    width: 200px;
+  }
+  @media (max-width: $breakpoint-sm) {
+    width: 155px;
+    a{
+      font-size: 12px;
+    }
+  }
 }
 
 .header-list{
+  padding-right: 220px;
   text-align: right;
   @media (max-width: $breakpoint-xl){
     display: none;

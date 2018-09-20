@@ -1,0 +1,52 @@
+
+.animate-in {
+  animation: modalIn 0.7s ease;
+  animation-iteration-count: 1;
+}
+
+.animate-away {
+  animation: modalAway .7s ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes modalIn {
+  0% {
+    transform: translateY(200%) ;
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10%) ;
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes modalAway {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+
+
+.fade-in {
+  animation: fade-in .35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
