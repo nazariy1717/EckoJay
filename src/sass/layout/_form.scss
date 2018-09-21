@@ -8,6 +8,22 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+.bootstrap-realtypress label{
+  display: block;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 13px;
+  font-weight: 700!important;
+  line-height: 1.54!important;
+  color: var(--col-black)!important;
+}
+.bootstrap-realtypress .progress-bar{
+  background-color: #b61625!important;
+  background-image: linear-gradient(to bottom, #b61625 0%, #b61625 100%)!important;
+}
+.refresh-math-captcha{
+  color: var(--rouge)!important;
+}
+
 .form{
 
   &__group { position: relative;   }
@@ -17,6 +33,7 @@ input[type=number]::-webkit-outer-spin-button {
   &__group-25{  margin-bottom: 25px;position: relative;  }
   &__group-30{  margin-bottom: 30px;position: relative;  }
   &__group-50{  margin-bottom: 50px;position: relative;  }
+
 
   &__label{
     display: block;
