@@ -40,6 +40,7 @@
 
 .product-soc{
   &__item{
+    vertical-align: middle;
     display: inline-block;
     &:last-child{
       .product-soc__link{
@@ -51,6 +52,10 @@
           top: 1px;
         }
       }
+    }
+    a{
+      height: 30px;
+      line-height: 30px!important;
     }
   }
   &__link{
@@ -82,6 +87,9 @@
     .icon-pinterest{ color: #e62b33; }
   }
 }
+
+
+
 
 .product-carousel{
   position: relative;

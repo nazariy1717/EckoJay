@@ -54,12 +54,16 @@
     display: none;
     position: fixed;
     left: 0;
-    right: 0;
+    right: -17px;
     top: 90px;
     bottom: 0;
     padding: 15px;
+    padding-right: 17px;
     background-color: #fff;
     text-align: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
   &__item{
     position: relative;
