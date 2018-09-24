@@ -197,9 +197,29 @@
     font-size: 14px;
     color: var(--warm-grey);
   }
-
 }
 
+
+.errorPage{
+  &__content{
+    text-align: center;
+    margin-top: 90px;
+    height: calc(100vh - 90px);
+    h1{
+      font-family: 'Libre Baskerville', sans-serif;
+      font-size: 90px;
+      line-height: 48px;
+      font-weight: bold;
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    p{
+      margin-bottom: 30px;
+    }
+
+  }
+}
 
 
 
