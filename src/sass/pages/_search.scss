@@ -68,12 +68,12 @@
   font-size: 14px;
   line-height: normal;
   color: var(--warm-grey);
-  margin-bottom: 30px;
+  margin-bottom: 30px!important;
 }
 
 .search-filter{
   text-align: right;
-  margin-bottom: 30px;
+  margin-bottom: 30px!important;
   @media (max-width: $breakpoint-sm){
     text-align: left;
   }

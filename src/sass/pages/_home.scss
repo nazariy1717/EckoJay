@@ -4,6 +4,7 @@
 .app-home{
   position: relative;
   margin-top: 90px;
+
   background-color: #ccc;
   &__btn-list{
     position: absolute;
@@ -36,7 +37,7 @@
   &__carousel{}
   &__cell{
     width: 100%;
-    height: 730px;
+    height: calc(100vh - 90px);
     background: center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -207,6 +208,30 @@
       height: 250px;
     }
   }
+  &__label{
+    position: absolute;
+    left: 15px!important;
+    top: 5px;
+    color: #fff;
+    padding: 0 5px;
+    width: auto;
+    border-radius: 3px;
+    background-color: var(--col-black);
+  }
+
+  .home-item__label + .home-item__status{
+    top: 35px;
+  }
+  &__status{
+    position: absolute;
+    left: 15px!important;;
+    top: 5px;
+    color: #fff;
+    padding: 0 5px;
+    width: auto;
+    border-radius: 3px;
+    background-color: var(--rouge);
+  }
   &__overlay{
     position: absolute;
     left: 15px;
@@ -255,7 +280,7 @@
 }
 
 .app-featured{
-  padding: 90px 0;
+  padding: 90px 0 60px 0;
   background-color: #fafafa;
   @media(max-width: $breakpoint-lg){
     padding: 60px 0 70px 0;
@@ -718,6 +743,9 @@
       left: -15px;
       font-size: 90px;
       color: var(--rouge);
+      @media(max-width: $breakpoint-sm){
+        font-size: 45px;
+      }
     }
   }
   &__cell{
@@ -729,7 +757,7 @@
       padding: 90px 30px 65px 50px;
     }
     @media(max-width: $breakpoint-sm){
-      padding: 60px 20px 35px 40px;
+      padding: 30px 20px 30px 40px;
     }
   }
   &__txt{
