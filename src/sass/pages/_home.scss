@@ -337,6 +337,10 @@
   }
 }
 
+.app-listing-sec{
+  overflow: hidden;
+}
+
 .app-listing{
   padding: 60px 0 70px 0;
   &__title{
@@ -381,8 +385,16 @@
   }
   .flickity-viewport{
     margin: 0 -7px;
+    overflow: visible;
   }
   &__cell{
+    opacity: 0.45;
+    &.is-selected{
+      opacity: 1;
+    }
+    &.is-selected + .app-listing{
+      opacity: 1;
+    }
     width: 33.33333%;
     padding: 0 7px;
     @media(max-width: $breakpoint-lg){
@@ -391,6 +403,12 @@
     @media(max-width: $breakpoint-sm){
       width: 100%;
     }
+  }
+  .app-listing__cell.is-selected + .app-listing__cell{
+    opacity: 1;
+  }
+  .app-listing__cell.is-selected + .app-listing__cell + .app-listing__cell{
+    opacity: 1;
   }
 }
 

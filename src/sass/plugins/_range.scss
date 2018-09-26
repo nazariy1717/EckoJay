@@ -746,7 +746,7 @@ button.ui-button::-moz-focus-inner {
   span{
     position: absolute;
     top: -30px;
-    left: 50%;
+    left: calc(50% - 5px);
     transform: translateX(-50%);
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
@@ -773,7 +773,7 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-slider-horizontal .ui-slider-handle {
   top: -7px;
-  margin-left: -3px;
+  margin-left: -15px;
 }
 .ui-slider-horizontal .ui-slider-range {
   top: 0;
@@ -859,7 +859,14 @@ button.ui-button::-moz-focus-inner {
 .ui-widget-content {
   border: 0;
   color: var(--warm-grey);
-  background-color: var(--light-gray)
+  background-color: var(--light-gray);
+  .ui-slider-handle:nth-child(1){
+    margin-left: 0;
+  }
+  .ui-slider-handle:nth-child(2){
+    margin-left: -20px;
+  }
+
 }
 .ui-widget-content a {
   color: #333333;
