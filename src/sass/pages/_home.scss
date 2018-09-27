@@ -280,6 +280,7 @@
 }
 
 .app-featured{
+  overflow: hidden;
   padding: 90px 0 60px 0;
   background-color: #fafafa;
   @media(max-width: $breakpoint-lg){
@@ -287,6 +288,22 @@
   }
   &__column{
     padding: 0 15px;
+    &:nth-child(1){
+      position: relative;
+    }
+  }
+  &__column-content{
+    position: relative;
+    z-index: 5;
+  }
+  &__overlay{
+    position: absolute;
+    left: -999%;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 3;
+    background-color: #fafafa;
   }
   &__title{
     margin-bottom: 25px;
@@ -327,10 +344,18 @@
   }
   .flickity-viewport{
     margin: 0 -7px;
+    overflow: visible;
   }
   &__cell{
     padding: 0 7px;
     width: 50%;
+    opacity: 0.35;
+    &.is-selected{
+      opacity: 1;
+    }
+    &.is-selected + &{
+      opacity: 1;
+    }
     @media(max-width: $breakpoint-sm){
       width: 100%;
     }
@@ -414,13 +439,10 @@
 
 
 
-
 .app-links{
   margin-bottom: 70px;
   &__content{
     position: relative;
-    max-width: 1440px;
-    margin: auto;
   }
   &__item{
     position: relative;
@@ -669,6 +691,9 @@
     @media(max-width: $breakpoint-xl){
       height: 625px;
       padding-top: 60px;
+    }
+    .flickity-viewport{
+      background-color: rgba(255, 255, 255, 0.8);
     }
   }
 
