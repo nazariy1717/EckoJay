@@ -30,7 +30,7 @@
   padding: 0;
   cursor: pointer;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: uppercase!important;
   line-height: 45px;
   font-size: 15px;
   font-weight: 500;
@@ -121,9 +121,9 @@
   border: solid 1px var(--rouge);
   color: var(--rouge);
   font-size: 15px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-weight: 600!important;
+  text-transform: uppercase!important;
+  font-family: 'Montserrat', sans-serif!important;
   transition: background 0.3s;
   span{
     display: block;
@@ -171,9 +171,9 @@
   border: solid 1px var(--rouge);
   color: var(--rouge);
   font-size: 15px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-weight: 600!important;
+  text-transform: uppercase!important;
+  font-family: 'Montserrat', sans-serif!important;
   transition: background 0.3s;
   &.--modifier{
     border: 0;
@@ -212,7 +212,7 @@
   font-size: 14px;
   font-weight: 500;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: uppercase!important;
   text-align: center;
   margin: 30px auto auto;
   span{
@@ -237,11 +237,11 @@
   padding: 0;
   cursor: pointer;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: uppercase!important;
   line-height: 45px;
   font-size: 15px;
-  font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
+  font-weight: 500!important;
+  font-family: 'Montserrat', sans-serif!important;
   transition: all 0.3s;
   &.--max-width{
     max-width: 100%;
@@ -250,6 +250,7 @@
     color: #fff;
     background-color: var(--rouge);
     &:hover{
+      color: #fff!important;
       background-color: var(--col-black);
     }
   }
@@ -257,7 +258,7 @@
     color:  var(--col-black);
     background-color: #fff;
     &:hover{
-      color: #fff;
+      color: #fff!important;
       background-color: var(--col-black);
     }
   }

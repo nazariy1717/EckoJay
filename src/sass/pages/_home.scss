@@ -451,17 +451,43 @@
   &__item-1{
     .app-links__column-btn{
       background-color: #000;
+      .btn{
+        border: 1px solid #fff;
+        color: #fff;
+        background-color: var(--col-black);
+        &:hover{
+          border: 1px solid #fff;
+          color: var(--col-black);
+          background-color: #fff;
+          i{
+            transform: translate(calc(-50% + 95px), -50%);
+            color: var(--col-black);
+          }
+        }
+      }
     }
     .app-links__overlay{
-      background-color: rgba(0,0,0,0.3);
+      background-color: rgba(0,0,0,0.5);
     }
   }
+
   &__item-2{
     .app-links__row{
       justify-content: flex-end;
     }
     .app-links__column-btn{
       background-color: var(--rouge);
+      .btn{
+        &:hover{
+          border: #fff;
+          color: var(--col-black);
+          background-color: #fff;
+          i{
+            transform: translate(calc(-50% + 95px), -50%);
+            color: var(--col-black);
+          }
+        }
+      }
     }
     .app-links__overlay{
       background-color: rgba(182, 22, 37, 0.75);
@@ -511,6 +537,7 @@
     right: 0;
     top: 0;
     bottom: 0;
+    mix-blend-mode: multiply;
   }
   &__title{
     position: absolute;
@@ -693,7 +720,6 @@
       padding-top: 60px;
     }
     .flickity-viewport{
-      background-color: rgba(255, 255, 255, 0.8);
     }
   }
 
@@ -768,7 +794,7 @@
     max-width: 705px;
     width: 100%;
     height: 300px;
-    z-index: 9;
+    z-index: initial;
     background-color: rgba(255,255,255,0.8);
 
     @media(max-width: $breakpoint-xl){
