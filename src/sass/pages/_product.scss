@@ -478,12 +478,12 @@
     font-size: 15px;
     font-weight: 600;
     line-height: normal;
-    text-transform: uppercase;
     color: var(--warm-grey);
     margin-bottom: 5px;
   }
   &__subtitle{
     font-size: 16px;
+    text-transform: uppercase;
     line-height: 1.5;
     color: var(--col-black);
   }
