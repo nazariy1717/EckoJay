@@ -353,7 +353,7 @@
       color: var(--rouge);
       border: solid 1px var(--rouge);
     }
-    &.active{
+    &.current, &.active{
       color: #fff;
       background-color: var(--rouge);
       border: solid 1px var(--rouge);
