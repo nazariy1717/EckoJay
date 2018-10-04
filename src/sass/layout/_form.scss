@@ -78,7 +78,6 @@ input[type=number]::-webkit-outer-spin-button {
     font-family: 'Montserrat',sans-serif;
     padding: 0 10px;
     color: var(--pinkish-grey);
-    text-transform: uppercase;
     font-size: 13px;
     font-weight: 500;
     border: 0;
@@ -88,9 +87,6 @@ input[type=number]::-webkit-outer-spin-button {
     @include transition;
     &.--modifier{
       border-bottom: 1px solid var(--warm-grey);
-      &:focus{
-        color: #fff;
-      }
     }
     &.--lowercase{
       text-transform: capitalize;

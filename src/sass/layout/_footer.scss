@@ -35,6 +35,10 @@
     color: var(--warm-grey);
     margin-bottom: 30px;
   }
+
+  .form__input:focus, .form__select:focus {
+    color: #fff;
+  }
 }
 
 

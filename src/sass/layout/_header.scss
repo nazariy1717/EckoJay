@@ -96,6 +96,26 @@
         }
       }
     }
+    &.current_page_item, &.current-menu-item{
+      a{
+        color: var(--rouge);
+        @media (max-width: $breakpoint-xl){
+          color: var(--rouge);
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          left: -2px;
+          right: -2px;
+          bottom: 30px;
+          height: 2px;
+          background-color: var(--rouge);
+          @media (max-width: $breakpoint-xl){
+            display: none;
+          }
+        }
+      }
+    }
   }
   &__link{
     position: relative;
@@ -148,7 +168,7 @@
 
   &__btn{
     @extend .header-list__link;
-    padding-right: 20px;
+    padding: 0 10px;
     &.active{
       @media (max-width: $breakpoint-sm){
         color: #fff;
@@ -163,7 +183,7 @@
       position: absolute;
       font-size: 8px;
       color: var(--col-black);
-      right: 0;
+      right: -10px;
       top: 42px;
       transition: all 0.3s;
       @media (max-width: $breakpoint-xl){
